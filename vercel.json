@@ -1,8 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "pip install -r requirements.txt",
-  "buildCommand": "python manage.py migrate --noinput && python manage.py create_course_users && python manage.py collectstatic --noinput",
-  "outputDirectory": "staticfiles",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.py" }
-  ]
+  "buildCommand": "python manage.py migrate --noinput && python manage.py create_course_users && python manage.py collectstatic --noinput"
 }
